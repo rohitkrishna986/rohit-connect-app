@@ -107,11 +107,11 @@ const MessageBar = () => {
   };
 
   return (
-    <div className="h-[10vh] bg-[#1c1d25] flex items-center justify-center px-8 mb-5 gap-6">
-      <div className="flex-1 flex bg-[#2a2b33] rounded-md items-center gap-5 pr-5">
+    <div className="h-[10vh] bg-[#1c1d25] flex items-center justify-center px-8 mb-5 gap-3 md:gap-6">
+      <div className="flex-1 flex bg-[#2a2b33] rounded-md items-center gap-2 md:gap-5 pr-2 md:pr-5">
         <input
           type="text"
-          className="flex-1 p-5 bg-transparent rounded-md focus:border-none focus:outline-none"
+          className="flex-1 p-3 md:p-5 bg-transparent rounded-md focus:border-none focus:outline-none"
           placeholder="Enter message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -128,7 +128,7 @@ const MessageBar = () => {
           ref={fileInputRef}
           onChange={handleAttachmentChange}
         />
-        <div className="relative">
+        <div className="relative flex items-center">
           <button
             onClick={() => setEmojiPickerOpen(true)}
             className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"
@@ -147,9 +147,9 @@ const MessageBar = () => {
       </div>
       <button
         onClick={handleSendMessage}
-        className="bg-[#8417ff] rounded-full focus:bg-[#741bda] hover:bg-[#741bda] flex items-center justify-center p-5 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"
+        className="bg-[#8417ff] rounded-full focus:bg-[#741bda] hover:bg-[#741bda] flex items-center justify-center p-4 md:p-5 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"
       >
-        <IoSend className="text-xl" />
+        <IoSend className="md:text-xl text-md" />
       </button>
     </div>
   );
