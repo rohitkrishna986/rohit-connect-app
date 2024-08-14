@@ -79,7 +79,7 @@ const Auth = () => {
   };
 
   return (
-    <div className="bg-[#1b1c24] h-[100vh] w-[100vw] hidden md:flex items-center justify-center">
+    <div className="bg-[#1b1c24] h-[100vh] w-[100vw] flex items-center justify-center">
       <div className="w-[90vw] h-[90vh] bg-white border-2 border-white text-opacity-90 shadow-2xl md:w-[90vw] lg:w-[70vw] xl:w-[60vw] rounded-3xl grid xl:grid-cols-2">
         <div className="flex flex-col gap-10 justify-center items-center">
           <div className="hidden md:flex items-center justify-center flex-col">
