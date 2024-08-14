@@ -9,6 +9,7 @@ import apiClient from "@/lib/api-frontend.js";
 import { LOGIN_ROUTES, SIGNUP_ROUTES } from "@/utils/constants.js";
 import { useNavigate } from "react-router-dom";
 import useAppStore from "@/store";
+import Chat from "@/assets/Chat.jpg"
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -81,7 +82,7 @@ const Auth = () => {
     <div className="bg-[#1b1c24] h-[100vh] w-[100vw] flex items-center justify-center">
       <div className="w-[90vw] h-[90vh] bg-white border-2 border-white text-opacity-90 shadow-2xl md:w-[90vw] lg:w-[70vw] xl:w-[60vw] rounded-3xl grid xl:grid-cols-2">
         <div className="flex flex-col gap-10 justify-center items-center">
-          <div className="flex items-center justify-center flex-col">
+          <div className="hidden md:flex items-center justify-center flex-col">
             <div className="flex items-center justify-center">
               <h1 className="text-5xl font-bold md:text-6xl">Welcome</h1>
               <img src={Victory} alt="Victory Emoji" className="w-[100px]" />
@@ -89,6 +90,9 @@ const Auth = () => {
             <p className="font-medium text-center">
               Fill in the details to get started with the best chat app!
             </p>
+          </div>
+          <div className="flex md:hidden">
+            <img src={Chat} width={180} />
           </div>
           <div className="flex items-center justify-center w-full">
             <Tabs className="w-3/4" defaultValue="login">

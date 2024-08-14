@@ -41,7 +41,7 @@ const ContactContainer = () => {
   }, []);
 
   return (
-    <div className="relative md:w-[35vw] lg:w-[30vw] xl:w-[20vw] bg-[#1b1c24] border-r-2 border-[#2f303b] w-full">
+    <div className="relative h-[100vh] md:w-[35vw] lg:w-[30vw] xl:w-[20vw] bg-[#1b1c24] border-r-2 border-[#2f303b] w-full">
       <div>
         <Logo />
       </div>
@@ -73,10 +73,14 @@ export default ContactContainer;
 const Logo = () => {
   return (
     <div className="flex items-center justify-center gap-2 p-4">
-      <span className="text-4xl text-purple-400">
+      <span className="text-4xl text-purple-500">
         <MdConnectWithoutContact />
       </span>
-      <h2 className="font-bold text-2xl">Connect</h2>
+      <div>
+        <h2 className="font-bold text-2xl">Connect</h2>
+        <p className="text-[8px] text-center">Designed by <span className="text-purple-500">Rohit</span></p>
+      </div>
+      
     </div>
   );
 };
