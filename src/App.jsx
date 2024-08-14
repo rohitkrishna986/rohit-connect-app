@@ -29,15 +29,15 @@ const App = () => {
         const response = await apiClient.get(GET_USER_INFO, {
           withCredentials: true,
         });
-        if (response.status===200 && response.data.id) {
-          setUserInfo(response.data)
+        if (response.status === 200 && response.data.id) {
+          setUserInfo(response.data);
         } else {
-          setUserInfo(undefined)
-        } 
-      } catch(error) {
-        setUserInfo(undefined)
+          setUserInfo(undefined);
+        }
+      } catch (error) {
+        setUserInfo(undefined);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
     };
     if (!userInfo) {
@@ -48,7 +48,11 @@ const App = () => {
   }, [userInfo, setUserInfo]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="h-[100vh] w-[100vw] fixed top-0 z-10 left-0 bg-black/80 flex items-center justify-center flex-col gap-5 backdrop-blur-lg">
+        <h5 className="text-5xl animate-pulse">Loading...</h5>
+      </div>
+    );
   }
 
   return (
